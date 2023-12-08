@@ -1,7 +1,7 @@
 // Sidebar.jsx
 import React from 'react';
 import { Box } from '@chakra-ui/react';
-import { Button, VStack } from '@chakra-ui/react';
+import { Button, VStack ,  useColorModeValue} from '@chakra-ui/react';
 
 const Sidebar = () => {
   return (
@@ -10,7 +10,9 @@ const Sidebar = () => {
       top = {0}
       width="240px"
       height="100vh"
-      backgroundColor="gray.200"
+      backgroundColor= {useColorModeValue("#BB86FC", "#1a202c")}
+      borderRight={"1px"}
+      borderColor={useColorModeValue("#A070DA", "gray.700")}
       display="flex"
       flexDirection="column"
       alignItems="center"
