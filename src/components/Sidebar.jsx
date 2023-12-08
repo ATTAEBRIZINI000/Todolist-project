@@ -2,6 +2,8 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
 import { Button, VStack ,  useColorModeValue} from '@chakra-ui/react';
+import { Links } from '../constants';
+import { LinkItem } from './LinkItem';
 
 const Sidebar = () => {
   return (
@@ -19,16 +21,18 @@ const Sidebar = () => {
       paddingY="4"
     >
       {/* Logo */}
-      <Box fontSize="xl" fontWeight="bold" marginBottom="4">
+      <Box fontSize="xl" fontWeight="bold" marginBottom="8">
         Logo
       </Box>
 
       {/* Categories */}
-      <VStack spacing="2" flex="1">
-        <Button variant="ghost">Study</Button>
-        <Button variant="ghost">Work</Button>
-        <Button variant="ghost">Hobbies</Button>
-        <Button variant="ghost">Workout</Button>
+      <VStack spacing="1" flex="1">
+        {Links.map(item =>(
+          <LinkItem key = {item.id}
+          name = {item.name}
+          id = {item.id}
+          link = {item.link}/>
+        ))}
       </VStack>
 
       {/* Create Category Button */}
