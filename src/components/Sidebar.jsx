@@ -6,7 +6,9 @@ import { Button, VStack } from '@chakra-ui/react';
 const Sidebar = () => {
   return (
     <Box
-      width="200px"
+      position={'fixed'}
+      top = {0}
+      width="240px"
       height="100vh"
       backgroundColor="gray.200"
       display="flex"
